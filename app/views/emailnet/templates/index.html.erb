@@ -1,0 +1,9 @@
+<h1>Edit email templates</h1>
+
+<% @templates.each do |template| %>
+  <h2> <%= template['id'].humanize %></h2>
+  <p>
+    <%= template['description'] %>
+  </p>
+  <%= link_to 'Edit Template', template_path(id: template['id']) %>
+<% end %>
